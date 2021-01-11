@@ -1,0 +1,11 @@
+name: Lint
+
+on:
+    branches: [master]
+
+jobs:
+  lint:
+    container: python:3.8
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@master
