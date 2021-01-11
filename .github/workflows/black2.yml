@@ -1,4 +1,4 @@
-name: Lint
+name: Lint setup-python
 
 on:
   push
@@ -6,7 +6,7 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    container: python:3.8
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
       - uses: psf/black@master
